@@ -1,0 +1,15 @@
+{
+  "name": "openui5-todomvc",
+  "version": "0.0.0",
+  "description": "",
+  "main": "Gruntfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "BSD",
+  "devDependencies": {
+    "grunt-blanket-qunit": "~0.2.0",
+    "grunt-contrib-jshint": "~0.8.0"
+  }
+}
