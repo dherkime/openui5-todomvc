@@ -14,7 +14,12 @@
     <script src="resources/qunit-1.13.0.js"></script>
     <script src="resources/qunit-reporter-junit.js"></script>
     <script src="resources/tests.js"></script>
-    <script src="resources/blanket.min.js" data-cover-reporter="resources/grunt-reporter.js"></script>
+    <script src="resources/blanket.min.js"></script>
+    <script>
+        if (location.href.match(/(\?|&)gruntReport($|&|=)/)) {
+            blanket.options("reporter", "resources/grunt-reporter.js");
+        }
+    </script>
 
 </head>
 <body>
