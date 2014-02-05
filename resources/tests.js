@@ -1,25 +1,6 @@
 jQuery.sap.registerModulePath("todo", "js/todo");
 jQuery.sap.require("sap.ui.thirdparty.qunit");
 
-//var ctrl = sap.ui.controller("todo.Todo");
-//sinon.stub(ctrl, "getView").returns({
-//    // This is where we stub the view interface
-//    setModel : function() {
-//    },
-//    postMessage : function() {
-//    }
-//});
-
-//module( "module", {
-//    setup: function() {
-//        ctrl.onInit();
-//    },
-//    teardown: function() {
-//        ctrl.getView.restore;
-//        ctrl.clearAllTodos();
-//    }
-//});
-
 test("Set, get, and delete via todo persistency", function() {
     var persister = new todo.TodoPersistency("foo");
     var dummy = {

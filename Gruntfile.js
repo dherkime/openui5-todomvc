@@ -1,7 +1,7 @@
 module.exports = function(grunt) {
-
     grunt.loadNpmTasks('grunt-blanket-qunit');
     grunt.loadNpmTasks('grunt-contrib-jshint');
+    grunt.loadNpmTasks('grunt-contrib-connect');
 
     grunt.initConfig({
             qunit: {
@@ -10,8 +10,9 @@ module.exports = function(grunt) {
             connect: {
                 server: {
                     options: {
-                        port: 4444,
-                        base: '.'
+                        port: 8080,
+                        base: '.',
+                        keepalive: true
                     }
                 }
             },
@@ -36,7 +37,4 @@ module.exports = function(grunt) {
     });
 
     grunt.registerTask('default', ['jshint', 'blanket_qunit']);
-
-
-
 };
